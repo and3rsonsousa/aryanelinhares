@@ -25,13 +25,13 @@ const Encomendas = () => {
       <Head>
         <title>Aryane Linhares - Solicite seu Orçamento</title>
       </Head>
-      <h3 className="mb-2">Faça sua Encomenda</h3>
+      <h3 className="mb-2 text-brand-4">Faça sua Encomenda</h3>
       <p>Escolha as opções do seu bolo.</p>
 
       {/* Tamanho */}
 
       <section>
-        <h4>Tamanho</h4>
+        <h4 className="text-brand-4">Tamanho</h4>
         <div className="grid grid-cols-4 gap-2">
           {[
             {
@@ -75,7 +75,7 @@ const Encomendas = () => {
 
       {/* Massa */}
       <section>
-        <h4>Massa</h4>
+        <h4 className="text-brand-4">Massa</h4>
         <div className="grid grid-cols-4 gap-2">
           {[
             {
@@ -116,7 +116,11 @@ const Encomendas = () => {
 
       {/* Recheios */}
       <section>
-        <h4>Recheio</h4>
+        <h4 className="text-brand-4">Recheio</h4>
+        <p className="mb-2 text-sm">
+          Para adicionar mais recheios, fale com nosso consultor no final da
+          encomenda.
+        </p>
         <h5 className="opacity-60">Tradicionais</h5>
         <div className="grid grid-cols-6 gap-2 ">
           {[
@@ -256,7 +260,7 @@ const Encomendas = () => {
         </div>
       </section>
       <section>
-        <h4>Cobertura</h4>
+        <h4 className="text-brand-4">Cobertura</h4>
         <div className="grid grid-cols-2 gap-2 ">
           {[
             {
