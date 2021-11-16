@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       <div style={{ display: "none" }}>
-        <Image src="/seo.jpg" alt="Aryane Linhares" width={1200} height={630} />
+        <Image src="/seo.jpg" alt="Aryane Linhares" width={600} height={315} />
       </div>
     </div>
   );
