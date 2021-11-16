@@ -23,7 +23,7 @@ export default function Home() {
       <section className="py-1">
         <Link href="/encomendas">
           <a className="justify-center button">
-            <span> Fazer uma Encomendas </span>
+            <span> Faça sua Encomenda </span>
           </a>
         </Link>
       </section>
