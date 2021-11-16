@@ -5,14 +5,21 @@ const Encomendas = () => {
   const [encomenda, setEncomenda] = useState({
     tamanho: "PP",
     massa: "Branca",
-    recheios: [],
+    recheio: "",
     cobertura: "",
   });
-  let encomendaText = `*E N C O M E N D A* \n\n Tamanho: *${
-    encomenda.tamanho
-  }* \n Massa: *${encomenda.massa}* \n Recheios: *${encomenda.recheios.join(
-    " e "
-  )}* \n Cobertura: *${encomenda.cobertura}* \n`;
+  let encomendaText = `*E N C O M E N D A* \n\n Tamanho: *${encomenda.tamanho}* \n Massa: *${encomenda.massa}* \n Recheio: *${encomenda.recheio}* \n Cobertura: *${encomenda.cobertura}* \n`;
+  // const [encomenda, setEncomenda] = useState({
+  //   tamanho: "PP",
+  //   massa: "Branca",
+  //   recheios: [],
+  //   cobertura: "",
+  // });
+  // let encomendaText = `*E N C O M E N D A* \n\n Tamanho: *${
+  //   encomenda.tamanho
+  // }* \n Massa: *${encomenda.massa}* \n Recheios: *${encomenda.recheios.join(
+  //   " e "
+  // )}* \n Cobertura: *${encomenda.cobertura}* \n`;
   return (
     <div>
       <Head>
@@ -109,7 +116,7 @@ const Encomendas = () => {
 
       {/* Recheios */}
       <section>
-        <h4>Recheios</h4>
+        <h4>Recheio</h4>
         <h5 className="opacity-60">Tradicionais</h5>
         <div className="grid grid-cols-6 gap-2 ">
           {[
@@ -138,46 +145,50 @@ const Encomendas = () => {
             <div
               key={item.name}
               className={`py-3 px-4 text-center cursor-pointer rounded-xl leading-none ${
-                encomenda.recheios.filter((recheio) => recheio == item.name)
-                  .length > 0
+                encomenda.recheio == item.name
                   ? "bg-brand-3 text-brand-1"
                   : "bg-white"
+                // encomenda.recheios.filter((recheio) => recheio == item.name)
+                //   .length > 0
+                //   ? "bg-brand-3 text-brand-1"
+                //   : "bg-white"
               } ${
                 i > 2 ? "col-span-3" : "col-span-2"
               } flex items-center justify-center flex-col`}
               onClick={(e) => {
                 e.preventDefault();
-                if (
-                  encomenda.recheios.filter((recheio) => recheio == item.name)
-                    .length > 0
-                ) {
-                  setEncomenda(() => ({
-                    ...encomenda,
-                    recheios: [
-                      ...encomenda.recheios.filter(
-                        (recheio) => recheio != item.name
-                      ),
-                    ],
-                  }));
-                } else if (encomenda.recheios.length < 2) {
-                  setEncomenda(() => ({
-                    ...encomenda,
-                    recheios:
-                      encomenda.recheios.filter(
-                        (recheio) => recheio == item.name
-                      ).length > 0
-                        ? [
-                            ...encomenda.recheios.filter(
-                              (recheio) => recheio != item.name
-                            ),
-                          ]
-                        : [...encomenda.recheios, item.name],
-                  }));
-                } else {
-                  alert(
-                    "Você só pode escolher dois recheio. Para selecionar um sabor diferente, você precisa remover algum dos que já estão selecionados."
-                  );
-                }
+                setEncomenda(() => ({ ...encomenda, recheio: item.name }));
+                // if (
+                //   encomenda.recheios.filter((recheio) => recheio == item.name)
+                //     .length > 0
+                // ) {
+                //   setEncomenda(() => ({
+                //     ...encomenda,
+                //     recheios: [
+                //       ...encomenda.recheios.filter(
+                //         (recheio) => recheio != item.name
+                //       ),
+                //     ],
+                //   }));
+                // } else if (encomenda.recheios.length < 2) {
+                //   setEncomenda(() => ({
+                //     ...encomenda,
+                //     recheios:
+                //       encomenda.recheios.filter(
+                //         (recheio) => recheio == item.name
+                //       ).length > 0
+                //         ? [
+                //             ...encomenda.recheios.filter(
+                //               (recheio) => recheio != item.name
+                //             ),
+                //           ]
+                //         : [...encomenda.recheios, item.name],
+                //   }));
+                // } else {
+                //   alert(
+                //     "Você só pode escolher dois recheio. Para selecionar um sabor diferente, você precisa remover algum dos que já estão selecionados."
+                //   );
+                // }
               }}
             >
               <span className="font-semibold">{item.name}</span>
@@ -197,42 +208,46 @@ const Encomendas = () => {
             <div
               key={item.name}
               className={`py-3 px-4 text-center cursor-pointer rounded-xl leading-none ${
-                encomenda.recheios.filter((recheio) => recheio == item.name)
-                  .length > 0
+                encomenda.recheio == item.name
                   ? "bg-brand-3 text-brand-1"
                   : "bg-white"
+                // encomenda.recheios.filter((recheio) => recheio == item.name)
+                //   .length > 0
+                //   ? "bg-brand-3 text-brand-1"
+                //   : "bg-white"
               } flex items-center justify-center flex-col`}
               onClick={(e) => {
                 e.preventDefault();
-                if (
-                  encomenda.recheios.filter((recheio) => recheio == item.name)
-                    .length > 0
-                ) {
-                  setEncomenda(() => ({
-                    ...encomenda,
-                    recheios: [
-                      ...encomenda.recheios.filter(
-                        (recheio) => recheio != item.name
-                      ),
-                    ],
-                  }));
-                } else if (encomenda.recheios.length < 2) {
-                  setEncomenda(() => ({
-                    ...encomenda,
-                    recheios:
-                      encomenda.recheios.filter(
-                        (recheio) => recheio == item.name
-                      ).length > 0
-                        ? [
-                            ...encomenda.recheios.filter(
-                              (recheio) => recheio != item.name
-                            ),
-                          ]
-                        : [...encomenda.recheios, item.name],
-                  }));
-                } else {
-                  alert("Você só pode escolher dois recheio");
-                }
+                setEncomenda(() => ({ ...encomenda, recheio: item.name }));
+                // if (
+                //   encomenda.recheios.filter((recheio) => recheio == item.name)
+                //     .length > 0
+                // ) {
+                //   setEncomenda(() => ({
+                //     ...encomenda,
+                //     recheios: [
+                //       ...encomenda.recheios.filter(
+                //         (recheio) => recheio != item.name
+                //       ),
+                //     ],
+                //   }));
+                // } else if (encomenda.recheios.length < 2) {
+                //   setEncomenda(() => ({
+                //     ...encomenda,
+                //     recheios:
+                //       encomenda.recheios.filter(
+                //         (recheio) => recheio == item.name
+                //       ).length > 0
+                //         ? [
+                //             ...encomenda.recheios.filter(
+                //               (recheio) => recheio != item.name
+                //             ),
+                //           ]
+                //         : [...encomenda.recheios, item.name],
+                //   }));
+                // } else {
+                //   alert("Você só pode escolher dois recheio");
+                // }
               }}
             >
               <span className="font-semibold">{item.name}</span>
@@ -241,7 +256,7 @@ const Encomendas = () => {
         </div>
       </section>
       <section>
-        <h4>Coberturas</h4>
+        <h4>Cobertura</h4>
         <div className="grid grid-cols-2 gap-2 ">
           {[
             {
@@ -304,16 +319,16 @@ const Encomendas = () => {
           </div>
           <div className="flex justify-between py-4 border-b border-brand-2">
             <div className="w-20 space-y-4">
-              <span className="font-semibold">Recheios</span>
+              <span className="font-semibold">Recheio</span>
             </div>
             <div className="ml-8 space-y-4 text-right">
               <div>
-                {encomenda.recheios.length === 0 ? (
-                  <span className="text-xs tracking-wide uppercase opacity-60">
-                    Sem Recheios
-                  </span>
+                {encomenda.recheio ? (
+                  encomenda.recheio
                 ) : (
-                  encomenda.recheios.join(" e ")
+                  <span className="text-xs tracking-wide uppercase opacity-60">
+                    Sem Recheio
+                  </span>
                 )}
               </div>
             </div>
@@ -343,7 +358,7 @@ const Encomendas = () => {
         >
           Solicitar Orçamento
         </a>
-        <div className="mt-2 text-sm text-center">
+        <div className="mt-4 text-sm text-center">
           Retornaremos o seu contato confirmando a sua encomenda
         </div>
       </div>
