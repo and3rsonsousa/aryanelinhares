@@ -4,9 +4,9 @@ import { GTM_ID } from "../lib/gtm";
 const MyDocument = (ctx) => (
   <Html lang="pt-br">
     <Head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta name="language" content="pt-BR" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta content="#003388" name="theme-color" />
 
       <link rel="shortcut icon" href="/favicon.png" />
