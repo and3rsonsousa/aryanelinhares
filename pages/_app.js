@@ -12,7 +12,13 @@ function MyApp({ Component, pageProps }) {
         </header>
         <Component {...pageProps} />
       </div>
-      <img src="/seo.jpg" alt="" style={{ display: "none" }} />
+      <Image
+        src="/seo.jpg"
+        alt="Aryane Linhares"
+        style={{ display: "none" }}
+        width={1200}
+        height={630}
+      />
     </div>
   );
 }
