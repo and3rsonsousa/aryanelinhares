@@ -357,7 +357,7 @@ const Encomendas = () => {
       </div>
       <div className="pb-16 mt-8">
         <a
-          href={`https://wa.me/+5588981082050?text=${encodeURI(encomendaText)}`}
+          href={`https://wa.me/+5588992358601?text=${encodeURI(encomendaText)}`}
           className="justify-center button button-primary"
         >
           Solicitar Orçamento
