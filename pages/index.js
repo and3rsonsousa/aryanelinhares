@@ -20,13 +20,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-1">
-        <Link href="/encomendas">
-          <a className="justify-center button">
-            <span> Faça sua Encomenda </span>
-          </a>
-        </Link>
-      </section>
+      <div className="p-4 mb-4 rounded-lg bg-brand-2">
+        <div className="mb-2 font-bold tracking-widest text-center animate-pulse">
+          NOVIDADE
+        </div>
+        <section className="py-1">
+          <Link href="/encomendas">
+            <a className="justify-center button">
+              <span> Faça sua Encomenda </span>
+            </a>
+          </Link>
+        </section>
+      </div>
       <section className="py-1">
         <a
           href="https://g.page/aryanelinhares"
