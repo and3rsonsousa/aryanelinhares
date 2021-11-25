@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { useEffect } from "react";
 import Image from "next/image";
 import Script from "next/script";
 import { useRouter } from "next/router";
