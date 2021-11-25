@@ -7,7 +7,7 @@ const MyDocument = (ctx) => (
       <meta charSet="utf-8" />
       <meta name="language" content="pt-BR" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta content="#003388" name="theme-color" />
+      <meta content="#FCE8EA" name="theme-color" />
 
       <link rel="shortcut icon" href="/favicon.png" />
       <meta
